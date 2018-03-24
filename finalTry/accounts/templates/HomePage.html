@@ -27,8 +27,8 @@
   <p class="lead">"Things can go wrong during events, and very rarely will everything go exactly as we plan."</p>
   <hr class="my-4">
   <p id="lab">Select your Category</p>
-  <button type="button" onclick="window.open({% url 'login' %})" target="_blank" class="btn btn-primary">Student </button><br><br>
-  <button type="button" onclick="window.open('LoginPageStudent.html')"class="btn btn-primary">Committee</button>
+  <button type="button" onclick="window.open('{% url 'login' %}')" target="_blank" class="btn btn-primary">Student </button><br><br>
+  <button type="button" onclick="window.open('{% url 'committee_login' %}')"class="btn btn-primary">Committee</button>
   </div>
 
     {% if user.is_authenticated %}
