@@ -8,7 +8,10 @@ from accounts.models import StudentProfile
 
 
 def index(request):
-    return render(request , 'HomePage.html' , context=None)
+    return render(request , 'accounts/index.html' , context=None)
+
+def event(request):
+    return render(request , 'accounts/events.html' , context=None)
 
 def signup(request):
     if request.method == 'POST':
@@ -19,7 +22,7 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('index')
+            return redirect('accounts:index')
     else:
         form = SignUpForm()
     return render(request, 'LoginPageStudent.html', {'form': form})

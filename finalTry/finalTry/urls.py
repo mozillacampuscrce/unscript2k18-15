@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+from placement import views as plac
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include('accounts.urls')) ,
+    path('' , include('committee.urls')) ,
+    path('placements/', plac.recruitment_form , name = 'placement')
 ]
