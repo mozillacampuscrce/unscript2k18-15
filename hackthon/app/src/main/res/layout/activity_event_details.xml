@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.collekarry.hackthon.eventDetails">
+
+
+    <RelativeLayout
+        android:id="@+id/bg3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/councilName"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Council Name :"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/eventName"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/councilName"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Event name:"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/Rate"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/eventName"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Rate of the event :"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/discrip"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Rate"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Event discription :"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/councilEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/councilName"
+            android:layout_alignBottom="@+id/councilName"
+            android:layout_toEndOf="@+id/councilName"
+            android:ems="10"
+            android:hint="enter the name.."
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/eventEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/eventName"
+            android:layout_alignBottom="@+id/eventName"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/eventName"
+            android:ems="10"
+            android:hint="enter the name.."
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/rateEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Rate"
+            android:layout_alignBottom="@+id/Rate"
+            android:layout_toEndOf="@+id/Rate"
+            android:ems="10"
+            android:hint="enter the rate.."
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/discrpEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/discrip"
+            android:layout_alignBottom="@+id/discrip"
+            android:layout_toEndOf="@+id/discrip"
+            android:ems="10"
+            android:hint="enter the discrp.."
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="ADD"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/addDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discrip"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_toStartOf="@+id/addButton"
+            android:text="ADD DATE" />
+
+        <Button
+            android:id="@+id/viewCalender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/addDate"
+            android:layout_alignBottom="@+id/addDate"
+            android:layout_alignEnd="@+id/eventEditText"
+            android:layout_marginEnd="12dp"
+            android:text="VIEW CALENDER" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

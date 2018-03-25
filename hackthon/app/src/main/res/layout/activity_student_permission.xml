@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.collekarry.hackthon.StudentPermission">
+
+    <RelativeLayout
+        android:id="@+id/bg18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="37dp"
+            android:text="Student RollNo"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="55dp"
+            android:text="Student CGPA"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="42dp"
+            android:text="Student Branch"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/studentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:ems="10"
+            android:hint="Enter RollNo"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/studentCGPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView1"
+            android:ems="10"
+            android:hint="Enter CGPA"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/studentBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:ems="10"
+            android:hint="Enter Branch"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/studentAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/studentBranch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:text="Submit" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
