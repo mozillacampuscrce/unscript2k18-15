@@ -1,0 +1,15 @@
+{% extends 'accounts/All The HTML FILES/base.html' %}
+{% block content %}
+    <div class="container mt-5 mb-5" id="backg">
+        <div class="col">
+            <div class="row">
+                <div class="jumbotron pos6">
+                    <p>Enter your Category</p>
+                    <br><hr><br>
+                    <button id="pos7"type="button" class="btn btn-primary" onclick="location.href={% url 'accounts:event' %}">Events</button>
+                    <button id="pos7"type="button" class="btn btn-primary" onclick="Location.href = {% url 'placement' %}">Placement</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

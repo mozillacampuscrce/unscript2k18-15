@@ -1,0 +1,15 @@
+{% extends 'HomePage.html' %}
+{% block content %}
+    <div class="container">
+
+    </div>
+    <div class="Jumbotron pos8">
+
+        <h1>List of Events</h1>
+
+        {% for event in event_list %}
+            <p> {{ event.name }} on <span class="space">{{ event.date }}</span><span class="space">{{ event.price }}</span></p>
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

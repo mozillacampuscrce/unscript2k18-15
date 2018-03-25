@@ -8,9 +8,9 @@ from accounts.models import Event
 
 class EventCreateView(CreateView):
     model = Event
-    template_name = 'event_create.html'
+    template_name = 'ALL HTML FILES/event_create.html'
     form_class = CreateEventForm
 
 class EventListView(ListView):
     model = Event
-    template_name = 'event_list.html'
+    template_name = 'ALL HTML FILES/event_list.html'

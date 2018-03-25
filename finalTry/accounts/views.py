@@ -8,7 +8,7 @@ from accounts.models import StudentProfile
 
 
 def index(request):
-    return render(request , 'accounts/index.html' , context=None)
+    return render(request, 'accounts/All The HTML FILES/index.html', context=None)
 
 def event(request):
     return render(request , 'accounts/events.html' , context=None)
