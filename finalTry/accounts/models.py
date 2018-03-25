@@ -24,18 +24,18 @@ class StudentProfile(models.Model):
         return reverse('accounts:index')
 
 
-
 class Event(models.Model):
     name = models.CharField(max_length=50 , blank=True)
-    date = models.DateField(default=None , blank=False)
-    price = models.SmallIntegerField(default=None , blank=False)
-    prize = models.SmallIntegerField(default=None , blank=False)
+    start_date = models.DateTimeField(default=None , blank=False , unique=True)
+    duration_in_hrs = models.SmallIntegerField(default=0 , blank=True)
+    price = models.SmallIntegerField(default=0 , blank=True)
+    prize = models.SmallIntegerField(default=0 , blank=True)
     is_approved = models.BooleanField(default=False , blank=True)
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('index')
+        return reverse('accounts:index')
 
 class CommitteeProfile(models.Model):
     user = models.OneToOneField(User , on_delete=models.CASCADE , related_name='committee_profile')

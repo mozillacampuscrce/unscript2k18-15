@@ -6,4 +6,4 @@ from accounts.models import Event
 class CreateEventForm(forms.ModelForm):
     class Meta:
         model = Event
-        fields = ['name' , 'date' , 'price' , 'prize']
+        fields = ['name' , 'start_date' , 'duration_in_hrs' , 'price' , 'prize']

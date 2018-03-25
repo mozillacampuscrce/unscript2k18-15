@@ -1,7 +1,12 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import models
-
+from django import forms
+from finalTry import settings
 # Create your models here.
 from django.forms import ModelForm
+
+class Applicant(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL , on_delete=models.CASCADE)
 
 
 class Company(models.Model):
@@ -16,3 +21,10 @@ class CompanyForm(ModelForm):
     class Meta:
         model = Company
         fields = ['name' , 'email' , 'criteria' , 'requirement']
+
+
+class PlacementApplyForm(ModelForm):
+    company_name = forms.MultipleChoiceField(choices= Company.objects.name  , widget=forms.CheckboxSelectMultiple )
+    class Meta:
+        model = Applicant
+        fields = ['company_name']
