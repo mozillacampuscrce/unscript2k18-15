@@ -1,4 +1,4 @@
-
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="AllTheCSS.css">
+    <style type="text/css">
 
+        #backg{
+            background-image: url({% static "images/bg.png" %});
+        }
+    </style>
 </head>
 <body id="backg">
 
