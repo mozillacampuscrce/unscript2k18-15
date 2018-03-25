@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include('accounts.urls')) ,
     path('' , include('committee.urls')) ,
-    path('placements/', plac.recruitment_form , name = 'placement')
+    path('placements/', plac.recruitment_form , name = 'placement') ,
+    path('apply/', plac.placement_form , name = 'apply') ,
+    path('place-home/', plac.place_index , name = 'place_index') ,
 ]

@@ -1,0 +1,14 @@
+{% extends 'accounts//base.html' %}
+{% block content %}
+
+            <div class="container-fluid">
+                <div class="jumbotron sty" >
+                    <p id="texts" class="ml-auto mr-auto pos7"> Welcome to Event Manager</p>
+                    <br><hr><br>
+                    <button id="pos7"type="button" class="btn btn-primary" onclick="location.href={% url 'accounts:event' %}">Events</button>
+                    <button id="pos7"type="button" class="btn btn-primary" onclick="location.href={% url 'place_index' %}">Placement</button>
+                </div>
+            </div>
+
+
+{% endblock %}
